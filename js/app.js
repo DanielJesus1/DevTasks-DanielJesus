@@ -11,6 +11,7 @@ const totalTasks = document.querySelector("#total-tasks");
 const pendingTasks = document.querySelector("#pending-tasks");
 const completedTasks = document.querySelector("#completed-tasks");
 
+
 export function createTask(text) {
   return {
     id: Date.now(),
@@ -42,6 +43,8 @@ export function getTaskStats(tasks) {
 
   return { total, pending, completed };
 }
+
+
 
 function saveTasks() {
   localStorage.setItem("devtasks", JSON.stringify(tasks));
