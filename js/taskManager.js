@@ -7,8 +7,8 @@ export function createTask(text) {
     };
 }
 
-export function isValidTask(title) {
-    return false;
+export function isValidTask(text) {
+    return typeof text === "string" && text.trim().length > 0;
 }
 
 export function filterTasks(tasks, filter) {
