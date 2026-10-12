@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # 1. Actualitzacions per a les dependències del projecte Node.js / npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # 2. Actualitzacions per a les accions de GitHub Actions utilitzades als workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      
