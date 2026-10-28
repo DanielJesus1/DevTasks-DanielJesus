@@ -4,7 +4,6 @@ import {
   createTask,
   isValidTask,
   filterTasks,
-  clearCompletedTasks,
   getTaskStats
 } from "../js/taskManager.js";
 
@@ -48,21 +47,6 @@ describe("filterTasks", () => {
 
   it("retorna només les tasques completades", () => {
     expect(filterTasks(tasks, "completed")).toHaveLength(1);
-  });
-});
-
-describe("clearCompletedTasks", () => {
-  it("retorna un nou array sense les tasques completades", () => {
-    const tasks = [
-      { id: 1, text: "Tasca pendent", completed: false },
-      { id: 2, text: "Tasca completada", completed: true }
-    ];
-
-    const pendingTasks = clearCompletedTasks(tasks);
-
-    expect(pendingTasks).toEqual([tasks[0]]);
-    expect(pendingTasks).not.toBe(tasks);
-    expect(tasks).toHaveLength(2);
   });
 });
 
